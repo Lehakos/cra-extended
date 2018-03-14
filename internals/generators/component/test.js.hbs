@@ -1,0 +1,16 @@
+import { configureSetup } from 'utils/testHelpers';
+
+import { {{ pascalCase name }} } from './{{ pascalCase name }}';
+
+const defaultProps = {};
+
+const childrenMap = {};
+
+const setup = configureSetup({{ pascalCase name }}, defaultProps, childrenMap);
+
+describe('<{{ pascalCase name }} />', () => {
+  it('renders without crashing', () => {
+    const { wrapper } = setup();
+    expect(wrapper).toMatchSnapshot();
+  });
+});

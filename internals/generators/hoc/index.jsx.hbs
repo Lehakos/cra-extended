@@ -1,0 +1,21 @@
+// @flow
+import React from 'react';
+import hoistNonReactStatic from 'hoist-non-react-statics';
+
+import getDisplayName from 'utils/getDisplayName';
+
+function {{ camelCase name }}(WrappedComponent) {
+  function {{ properCase name }}Component(props) {
+    return <WrappedComponent {...props} />;
+  }
+
+  // копируем статические методы и свойства класса
+  hoistNonReactStatic({{ properCase name }}Component, WrappedComponent);
+
+  // устанавливаем компоненту обертке правильное имя
+  {{ properCase name }}Component.displayName = `{{ properCase name }}(${getDisplayName(WrappedComponent)})`;
+
+  return {{ properCase name }}Component;
+}
+
+export default {{ camelCase name }};

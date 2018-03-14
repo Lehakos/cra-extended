@@ -1,0 +1,22 @@
+// @flow
+import React, { Component } from 'react';
+
+{{#if wantPropTypes}}
+import type { Props } from './{{ pascalCase name }}.types';
+{{/if}}
+{{#if wantStyles}}
+import s from './{{ pascalCase name }}.style';
+{{/if}}
+
+// eslint-disable-next-line react/prefer-stateless-function
+export class {{ pascalCase name }} extends Component<*> {
+
+  render() {
+    return (
+      <div>
+        {{ pascalCase name }}
+      </div>
+    );
+  }
+
+}

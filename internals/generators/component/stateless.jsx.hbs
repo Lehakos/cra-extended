@@ -1,0 +1,15 @@
+// @flow
+import React from 'react';
+
+{{#if wantPropTypes}}
+import type { Props } from './{{ pascalCase name }}.types';
+{{/if}}
+{{#if wantStyles}}
+import s from './{{ pascalCase name }}.style';
+{{/if}}
+
+export const {{ pascalCase name }} = () => (
+  <div>
+    {{pascalCase name}}
+  </div>
+);
